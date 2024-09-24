@@ -1,0 +1,487 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Playfair Display, sans-serif;
+
+  }
+  
+  body {
+    font-family: Playfair Display, sans-serif;
+    line-height: 1.6;
+    background-color: #000000; /* Set background to black */
+    color: #ffffff; /* set text color to white for contrast */
+
+
+  }
+  
+  /* Navigation */
+  .navbar {
+    position: fixed;
+    width: 100%; 
+    background: #00000000;
+    color: #ffffff;
+    padding: 1em 2em;
+    text-align: right;
+    z-index : 1000;
+    display: block;
+
+  }
+
+  .navbar .logo img {
+    height: 100px; /* Adjust the logo size */
+    position: absolute;
+    top: 30px;
+    left: 30px; /* Position it at the top-left corner */
+    margin: auto;
+
+}
+  
+  .navbar ul {
+    list-style: none;
+    text-align: right;
+
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin: 0 2em;
+    padding-right: 20px;
+
+    
+  }
+  
+  .navbar ul li a {
+    color: #ffffff;
+    background-color: #ffffff00; 
+    text-decoration: none;
+    padding: 0.5em 1em; /* Add padding for spacing */
+    border: 2px solid transparent; /* Invisible border initially */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    display: inline-block; /* Ensure it's treated like a block to scale properly */
+    letter-spacing: normal; /* Normal letter spacing */
+    transform-origin: center; /* Ensure widening happens from the center */
+    border-radius: 10px;
+
+
+  }
+
+    /* Hover effect */
+  .navbar ul li a:hover {
+    background-color: #ffffff; /* Background becomes white */
+    color: #000000; /* Text color becomes the original background color */
+    border: 2px solid #ffffff; /* Visible border */
+    transform: scaleX(1.1); /* Widen the text horizontally by  */
+    letter-spacing: 1.1px; /* Increase letter spacing on hover */
+
+  }
+  
+  /* Sections */
+  section {
+    padding: 3%;
+    text-align: center;
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .section {
+    position: relative;
+    color: white;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    font-size: large;
+    margin: auto;
+  }
+
+  .section h1 {
+    padding-top: 4%;
+
+  }
+
+  /* Style for two-column layout */
+  .two-column-layout {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    
+  }
+
+  .column {
+    flex: 1; /* Each column takes up 50% of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-column img {
+    width: 110%; /* Ensure the image fits within the column */
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Text column */
+  .text-column {
+    text-align: center; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-box {
+    font-size: 1.5rem;
+    max-width: 600px;
+    color: #ffffff; 
+  }
+
+
+  .text-box h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff; 
+
+
+  }
+
+
+  .text-box p {
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+
+    
+  }
+
+  .btn-contact {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition effect */
+    display: inline-block; /* Ensure it's treated like a block to scale properly */
+    letter-spacing: normal; /* Normal letter spacing */
+    transform-origin: center; /* Ensure widening happens from the center */
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #2b2c2e;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .btn-contact:hover {
+    background-color: #ffffff; /* Background becomes white */
+    color: #000000; /* Text color becomes the original background color */
+    transform: scaleX(1.1); /* Widen the text horizontally by  */
+    letter-spacing: 1.2px; /* Increase letter spacing on hover */
+    cursor: pointer;
+  }
+
+
+  .card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 5%;
+  }
+
+  .card {
+      background-color: rgb(40, 40, 40);
+      outline-color: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      text-align: center;
+      padding-bottom: 20px;
+      opacity: 0; /* Initially hidden */
+      transform: translateY(20px); /* Start slightly shifted */
+  }
+
+  .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      padding-top: 5px;
+  }
+
+  .card-content {
+      padding: 7px;
+  }
+
+  .card-h3 {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      opacity: 0; /* Initially hidden */
+      transform: translateY(20px); /* Start slightly shifted */
+      
+  }
+
+  .card-content p {
+    color: #666;
+  }
+
+  .card.show, .card-h3.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  /* about us */
+
+  .about-us {
+    text-align: center; 
+    }
+
+
+  .about-us h2 {
+    margin: 5%;
+    padding-top: 20%;
+
+  }
+
+  .about-us p {
+    margin: 5%;
+    padding-bottom: 20%;
+  }
+
+
+  .vertical-text {
+    position: fixed; 
+    margin: auto;
+    top: 90%; /* Vertically center it */
+    left: 11px; /* Align to the left side */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate the text */
+    transform-origin: left; /* Set the origin to left for better alignment */
+    font-size: 10px; /* Adjust the font size as needed */
+    letter-spacing: 2px; 
+    color: rgb(84, 84, 84); 
+    white-space: nowrap; /* Prevent text from wrapping */
+    background-color: #00000000;
+    z-index: 1000; /* Make sure it stays on top of other elements */
+  }
+
+  
+  
+  /* highlights */
+
+  .gellery {
+    text-align: center;
+  }
+
+  .gallery h2 {
+    margin: 5%;
+    padding-top: 20%;
+
+  }
+
+  .gallery p {
+    margin: 5%;
+    padding-bottom: 20%;
+  }
+
+
+  /* contact */
+  .contact {
+    text-align: center;
+  }
+
+  .contact h2 {
+    margin: 1%;
+    padding-top: 15%;
+
+  }
+
+  .contact p {
+    margin: 1%;
+  }
+
+  .contact-end {
+    margin: 1%;
+    padding-bottom: 17%;
+    color: black;
+
+  }
+
+  
+
+
+  /* Footer */
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+
+  }
+
+  footer p {
+    padding-bottom: 1%;
+  }
+  
+  /* Social Media Icons */ 
+  svg {
+    color: rgb(226, 226, 226);
+    transition: all 0.3s ease; 
+    width: 60px;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  svg:hover {
+    color: white;
+  }
+
+  /* mobile */
+
+
+  header {
+    background-color: #f32323;
+    color: white;
+    padding: 10px;
+    position: relative;
+  }
+
+  .phone-nav {
+    position: fixed;
+    width: 100%; 
+    background: #885e5e;
+    color: #ffffff;
+    text-align: right;
+    z-index : 1000;
+    display: none;
+    
+
+  }
+
+  .phone-nav .phone-logo img {
+    height: 60px; /* Adjust the logo size */
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: none;
+
+  }
+
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 10px;
+    z-index: 100;
+
+
+  }
+
+  /* Mobile Dropdown Menu with Sliding Effect */
+  nav.dropdown {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 70%; /* Menu takes up 70% of the screen */
+    height: 100vh; /* Full vertical height */
+    background-color: #333;
+    overflow: hidden;
+    max-height: 0; /* Initially hidden */
+    transition: left 0.4s ease, max-height 0.4s ease;
+    z-index: 999; /* Ensure it's above the content */
+  }
+
+
+  nav.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px; /* Space for the fixed header */
+  }
+
+  nav.dropdown ul li {
+    margin: 10px 0;
+  }
+
+  nav.dropdown ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    background-color: #444;
+    border-radius: 5px;
+  }
+
+  nav.dropdown ul li a:hover {
+    background-color: #555;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+  }
+ 
+
+  /* mobile hero */
+  .mobile-hero {
+    display: none;
+    padding-top: 7%;
+  }
+
+  .mobile-hero h1 {
+    font-size: 30px;
+    padding-top: 40px;
+  }
+
+  .mobile-hero img {
+    height: 320px;
+    width: 390px;
+    padding-top: 10px;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .two-column-layout {
+      display: none;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .mobile-hero {
+      display: block;
+    }
+
+    .phone-nav {
+      display: block;
+    }
+    
+    .phone-nav .phone-logo img{
+      display: block;
+    }
+
+    
+    
+  
+    /* When menu is active, slide in */
+    nav.dropdown.active {
+      left: 0; /* Slides the menu in from the right */
+      max-height: 100vh; /* Expands the menu to full height */
+    }
+
+
+
+  }
+
