@@ -359,7 +359,7 @@
   }
 
   .phone-nav .phone-logo img {
-    height: 60px; /* Adjust the logo size */
+    height: 65px; /* Adjust the logo size */
     position: absolute;
     top: 1px;
     left: 1px;
@@ -446,6 +446,15 @@
   }
 
 
+  .carousel-container {
+    display: none;
+  }
+
+  
+  
+  
+
+
 
   @media only screen and (max-width: 600px) {
     .two-column-layout {
@@ -453,6 +462,10 @@
     }
 
     .navbar {
+      display: none;
+    }
+
+    .card-container {
       display: none;
     }
 
@@ -472,14 +485,54 @@
       display: block;
     }
 
-    
-    
-  
     /* When menu is active, slide in */
     nav.dropdown.active {
       left: 0; /* Slides the menu in from the right */
       max-height: 100vh; /* Expands the menu to full height */
     }
+
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      justify-content: start;
+      scroll-behavior: smooth;
+    }
+  
+    .carousel {
+      display: flex;
+      height: 250px;
+    }
+  
+    .phone-card {
+      min-width: 100%;
+      flex: 0 0 auto;
+      margin-right: 16px;
+      background-color: #7a7a7a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: center;
+    }
+  
+    /* Optional: Hide scrollbar for smooth visual experience on mobile */
+    .card-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .section h1 {
+      display: none;
+    }
+
+    
+
+
+
+    
+    
+    
+  
+    
 
 
 
