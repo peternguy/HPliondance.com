@@ -9,4 +9,6 @@ accompanied by live drumming, create a mesmerizing
 experience that bridges the past with the present all
 across Chicagoland.
 
-Website is aimed to not only strengthen brand recognition but also steamline client and team communication 
+Website is aimed to not only strengthen brand recognition but also steamline client and team communication. 
+
+Work still in progress!
